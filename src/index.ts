@@ -3,9 +3,7 @@ const ElementType =  {
     Container: 'Container'
 }
 
-class SelectStageVO {
 
-}
 
 class SceneObject {
   public identity: {
@@ -28,6 +26,16 @@ class SelectItemVO {
   }
 }
 
+class ContainerVO {
+  constructor(...args: any[]) {
+
+  }
+}
+
+class SelectStageVO {
+  public items: (ContainerVO | SelectItemVO)[] = []
+}
+
 function collectTaskItems( 
   stageVO: SelectStageVO, 
   items: SceneObject[], settings: ImageDataSettings, 
@@ -39,13 +47,16 @@ function collectTaskItems(
     switch (item.identity.elementType) {
       case ElementType.Container: 
         const itemId = item.identity.id; 
-        if (item.behavior?.children && item.behavior.children. length > 0) {
+        if (item.behavior?.children && item.behavior.children.length > 0) {
 
         }
         break; 
       
         case ElementType.Select_item: 
+        const itemVO = new SelectItemVO(
 
+        )
+        stageVO.items.push(itemVO)
         break;
 
         default: 
