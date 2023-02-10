@@ -126,6 +126,7 @@ namespace fl {
       //button.setAttribute('role', 'button')
       //button.setAttribute('baseType', 'fl.Button')
       label.style.cursor = 'text'
+      label.style.fontFamily = 'sans-serif'
       return label
     }
   }
@@ -167,10 +168,10 @@ function buildElement(child: any, parent: fl.ISprite): void {
   }
 
   element!.setStyle('backgroundColor', child.backgroundColor)
-  element!.setStyle('left', `${child.x}px`)
-  element!.setStyle('top', `${child.y}px`)
-  element!.setStyle('width', `${child.width}px`)
-  element!.setStyle('height', `${child.height}px`)
+  element!.setStyle('left', child.x)
+  element!.setStyle('top', child.y)
+  element!.setStyle('width', child.width)
+  element!.setStyle('height', child.height)
 
   element!.setStyle('color', child.color)
 

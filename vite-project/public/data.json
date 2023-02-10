@@ -1,38 +1,48 @@
 {
   "stage": {
     "backgroundColor": "#000000",
-    "width": 800,
-    "height": 600,
+    "width": "800px",
+    "height": "600px",
     "children": [
       {
         "type": "Sprite",
         "backgroundColor": "#00FF00",
-        "x": 10,
-        "y": 10,
-        "width": 500,
-        "height": 250,
-        "children": [],
-        "numChildren": 0
+        "x": "10px",
+        "y": "10px",
+        "width": "500px",
+        "height": "250px",
+        "children": [
+          {
+            "type": "TextField",
+            "backgroundColor": "none",
+            "color": "#000000",
+            "text": "This is a text.",
+            "x": "0px",
+            "y": "200px",
+            "width": "100px",
+            "height": "32px",
+            "children": []
+          }
+        ]
       },
       {
         "type": "Sprite",
         "backgroundColor": "#FF0000",
-        "x": 50,
-        "y": 20,
-        "width": 100,
-        "height": 100,
+        "x": "50px",
+        "y": "20px",
+        "width": "100px",
+        "height": "100px",
         "children": [
           {
             "type": "Button",
             "backgroundColor": "#00CCFF",
             "color": "#000000",
             "label": "Click Me",
-            "x": 0,
-            "y": 0,
-            "width": 100,
-            "height": 32,
-            "children": [],
-            "numChildren": 0
+            "x": "0px",
+            "y": "0px",
+            "width": "100px",
+            "height": "32px",
+            "children": []
           },
 
           {
@@ -40,15 +50,13 @@
             "backgroundColor": "none",
             "color": "#000000",
             "text": "This is a text.",
-            "x": 0,
-            "y": 40,
-            "width": 100,
-            "height": 32,
-            "children": [],
-            "numChildren": 0
+            "x": "0px",
+            "y": "40px",
+            "width": "100px",
+            "height": "32px",
+            "children": []
           }
-        ],
-        "numChildren": 0
+        ]
       }
     ]
   }
