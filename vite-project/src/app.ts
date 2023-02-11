@@ -138,14 +138,7 @@ export function loadUI(data: any) {
   for (const child of data.stage.children) {
     buildElement(child, root)
   }
-  stage.html!.innerHTML += `
-    <style>
-    button[baseType='fl.Button']:hover {
-     background: cyan !important;
-    
-    }
-    </style>
-    `
+  import('./style.css')
 }
 
 function buildElement(child: any, parent: fl.ISprite): void {

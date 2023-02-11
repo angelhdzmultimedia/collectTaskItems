@@ -1,0 +1,3 @@
+button[baseType='fl.Button']:hover {
+  background: cyan !important;
+}
