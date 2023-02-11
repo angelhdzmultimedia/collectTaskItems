@@ -6,7 +6,7 @@
     "children": [
       {
         "type": "Sprite",
-        "backgroundColor": "#00FF00",
+        "backgroundColor": "#000000",
         "x": "10px",
         "y": "10px",
         "width": "500px",
@@ -28,8 +28,8 @@
       {
         "type": "Sprite",
         "backgroundColor": "#FF0000",
-        "x": "50px",
-        "y": "20px",
+        "x": "200px",
+        "y": "80px",
         "width": "100px",
         "height": "100px",
         "children": [
@@ -37,7 +37,7 @@
             "type": "Button",
             "backgroundColor": "#00CCFF",
             "color": "#000000",
-            "label": "Click Me",
+            "label": "Click You",
             "x": "0px",
             "y": "0px",
             "width": "100px",

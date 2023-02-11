@@ -89,17 +89,11 @@ namespace fl {
       const button = document.createElement('button')
       //button.setAttribute('role', 'button')
       //button.setAttribute('baseType', 'fl.Button')
-      button.classList.add('btn')
+
       button.style.border = 'none'
       button.style.borderRadius = '6px'
       button.style.outline = 'none'
-      let color = '#00CCFF'
-      button.addEventListener('mouseover', (e) => {
-        ;(e.currentTarget as HTMLButtonElement).style.background = 'yellow'
-      })
-      button.addEventListener('mouseout', (e) => {
-        ;(e.currentTarget as HTMLButtonElement).style.background = color
-      })
+      button.setAttribute('baseType', 'fl.Button')
       button.style.cursor = 'pointer'
       return button
     }
@@ -144,6 +138,14 @@ export function loadUI(data: any) {
   for (const child of data.stage.children) {
     buildElement(child, root)
   }
+  stage.html!.innerHTML += `
+    <style>
+    button[baseType='fl.Button']:hover {
+     background: cyan !important;
+    
+    }
+    </style>
+    `
 }
 
 function buildElement(child: any, parent: fl.ISprite): void {
@@ -179,6 +181,7 @@ function buildElement(child: any, parent: fl.ISprite): void {
 
   parent.addChild(element!)
 
+  // Recursion
   if (child.children) {
     for (const subChild of child.children) {
       buildElement(subChild, element!)
